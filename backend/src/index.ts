@@ -8,12 +8,18 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+const corsOrigin = process.env.CORS_ORIGIN || "*";
+app.use(cors({
+  origin: corsOrigin
+}));
 
 app.use(servicesRoutes);
 app.use(appointmentsRoutes);
 
 const PORT = process.env.PORT || 3001;
+
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor Organizado rodando na porta ${PORT}`);
+  console.log(`🚀 Servidor rodando na porta ${PORT}`);
+  console.log(`📡 CORS permitido para: ${corsOrigin}`);
 });
