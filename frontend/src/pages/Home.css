@@ -1,0 +1,33 @@
+.home-container {
+  padding: 60px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.hero {
+  background: #000;
+  color: #fff;
+  padding: 60px;
+  border-radius: 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #f5e9d7;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.home-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-left: 4px solid #000;
+}
